@@ -2,27 +2,39 @@
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<ul class="nav navbar-nav">
-				<li ui-sref-active="active"><a ui-sref="home">Home</a></li>
-				<!--<li><a href="#">Link</a></li>-->
-				<!--<li><a href="#">Link</a></li>-->
+				<!--<li ui-sref-active="active"><a ui-sref="home">Home</a></li>-->
+				<li><a ng-click="addChart.open()"><span class="glyphicon glyphicon-plus"></span> New Chart</a></li>
+				<li>
+					<div class="input-group">
+						<input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dateFrom"
+							   is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true"/>
+						<span class="input-group-btn">
+							<button type="button" class="btn btn-default" ng-click="open1()">
+								<i class="glyphicon glyphicon-calendar"></i>
+							</button>
+         				</span>
+					</div>
+				</li>
+				<li>
+					<div class="input-group">
+						<input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dateTo"
+							   is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true"/>
+						<span class="input-group-btn">
+            				<button type="button" class="btn btn-default" ng-click="open2()">
+								<i class="glyphicon glyphicon-calendar"></i>
+							</button>
+						</span>
+					</div>
+				</li>
 			</ul>
 		</div>
 	</div>
 </nav>
 
-<div class="row">
-	<div class="col-md-6">
-		<div class="chart"></div>
+
+<div class="charts">
+	<div class="chart">
+		<div class="block">asd</div>
 	</div>
-	<div class="col-md-6">
-		<div class="chart"></div>
-	</div>
-</div>
-<div class="row">
-	<div class="col-md-6">
-		<div class="chart"></div>
-	</div>
-	<div class="col-md-6">
-		<div class="chart"></div>
-	</div>
+
 </div>
