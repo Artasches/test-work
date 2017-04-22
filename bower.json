@@ -1,0 +1,19 @@
+{
+  "name": "cabinet",
+  "authors": [
+    "hashboard"
+  ],
+  "description": "cabinet for hashboard",
+  "main": "index.js",
+  "license": "MIT",
+  "homepage": "http://hashboard.ru",
+  "dependencies": {
+    "angular": "^1.5",
+    "angular-ui-router": "^0.3.1",
+    "highcharts": "^5.0.10",
+    "angular-bootstrap": "^2.5.0",
+    "bootstrap": "^3.3.7",
+    "requirejs": "^2.3.3",
+    "lodash": "^4.17.4"
+  }
+}
