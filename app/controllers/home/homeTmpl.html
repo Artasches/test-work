@@ -1,13 +1,20 @@
 <nav class="navbar navbar-inverse">
 	<div class="container-fluid">
-		<div class="navbar-header">
-			<ul class="nav navbar-nav">
+		<div class="">
+			<ul class="nav navbar-nav navbar-left">
 				<!--<li ui-sref-active="active"><a ui-sref="home">Home</a></li>-->
-				<li><a ng-click="addChart.open()"><span class="glyphicon glyphicon-plus"></span> New Chart</a></li>
+				<li ng-show="charts.length<4">
+					<a ng-click="addChart.open()"><span class="glyphicon glyphicon-plus"></span> New Chart</a>
+				</li>
+
+			</ul>
+
+			<ul class="nav navbar-nav navbar-right">
 				<li>
 					<div class="input-group">
 						<input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dateFrom"
-							   is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true"/>
+							   is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true"
+							   ng-change="dateUpdate()"/>
 						<span class="input-group-btn">
 							<button type="button" class="btn btn-default" ng-click="open1()">
 								<i class="glyphicon glyphicon-calendar"></i>
@@ -18,7 +25,8 @@
 				<li>
 					<div class="input-group">
 						<input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dateTo"
-							   is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true"/>
+							   is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true"
+							   ng-change="dateUpdate()"/>
 						<span class="input-group-btn">
             				<button type="button" class="btn btn-default" ng-click="open2()">
 								<i class="glyphicon glyphicon-calendar"></i>
@@ -33,8 +41,17 @@
 
 
 <div class="charts">
-	<div class="chart">
-		<div class="block">asd</div>
+	<div class="chart" ng-repeat="chart in charts">
+		<div class="block">
+			<highchart config="chart"></highchart>
+			<div class="controls">
+				<button class="btn btn-primary btn-sm" ng-click="swapChartType(chart)">
+					<span class="glyphicon glyphicon-signal"></span>
+				</button>
+				<button class="btn btn-danger btn-sm" ng-click="remove(chart)">
+					<span class="glyphicon glyphicon-trash"></span>
+				</button>
+			</div>
+		</div>
 	</div>
-
 </div>

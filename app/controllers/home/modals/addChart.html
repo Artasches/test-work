@@ -1,13 +1,32 @@
 <div class="modal-header">
-	<h3 class="modal-title" id="modal-title">Add new chart</h3>
+	<h3 class="modal-title" id="modal-title">Add a new chart</h3>
 </div>
 <div class="modal-body" id="modal-body">
-	<label for="select">
-		Select sensor
-	</label>
-	<select name="sensor" id="select" class="form-control" ng-model="addChart.selectedSensor">
-		<option ng-repeat="sensor in addChart.sensors" ng-if="!sensor.added" value="{{::sensor.id}}">{{::sensor.name}}</option>
-	</select>
+	<p>
+		<label>Title</label>
+		<input type="text" ng-model="addChart.title" class="form-control">
+	</p>
+	<p>
+		<label for="select">
+			Select a sensor
+		</label>
+		<select name="sensor" id="select" class="form-control" ng-model="addChart.selectedSensor">
+			<option ng-repeat="sensor in addChart.sensors"ng-if="addChart.selectedSensor2!=sensor.id" value="{{::sensor.id}}">
+				{{::sensor.name}}
+			</option>
+		</select>
+	</p>
+	<p>
+		<label for="select2">
+			You can select the second sensor
+		</label>
+		<select name="sensor" id="select2" class="form-control" ng-model="addChart.selectedSensor2">
+			<option value="0" disabled selected>Select a sensor</option>
+			<option ng-repeat="sensor in addChart.sensors" ng-if="addChart.selectedSensor!=sensor.id" value="{{::sensor.id}}">
+				{{::sensor.name}}
+			</option>
+		</select>
+	</p>
 </div>
 <div class="modal-footer">
 	<button class="btn btn-primary pull-left" type="button" ng-click="addChart.add()">Add</button>

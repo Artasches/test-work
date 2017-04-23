@@ -2,6 +2,7 @@
 @import "bower_components/bootstrap/dist/css/bootstrap-theme.min.css";
 @import "bower_components/angular-bootstrap/ui-bootstrap-csp.css";
 @import "bower_components/highcharts/css/highcharts.css";
+@import "bower_components/highcharts-ng/dist/highcharts-ng.css";
 
 .navbar-nav {
   a {
@@ -21,11 +22,19 @@
     display: inline-block;
     width: 50%;
     padding: 15px;
+    vertical-align: top;
     .block {
       display: block;
       border: 1px solid #555;
       border-radius: 4px;
-      height: 300px;
+      min-height: 300px;
+      overflow: hidden;
+      .controls {
+        padding: 5px;
+        .btn{
+          margin-right: 5px;
+        }
+      }
     }
   }
 }
