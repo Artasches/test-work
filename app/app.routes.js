@@ -1,5 +1,3 @@
-// angular/app.routes.js
-
 define([], function() {
 	'use strict';
 

@@ -1,5 +1,3 @@
-// angular/app.directives.js
-
 define([
 
 ], function() {
@@ -8,7 +6,7 @@ define([
 	// modify list to object
 	return Array.prototype.reduce.call(arguments, function(result, item) {
 		var key = Object.keys(item).shift();
-		result[ key ] = item[ key ];
+		result[key] = item[key];
 		return result;
 	}, {});
 });

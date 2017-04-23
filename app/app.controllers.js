@@ -1,5 +1,3 @@
-// angular/app.controllers.js
-
 define([
 	'./controllers/home/homeController'
 ], function() {

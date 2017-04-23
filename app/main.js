@@ -5,6 +5,7 @@ require.config({
 		'angularUiRouter': '../bower_components/angular-ui-router/release/angular-ui-router.min',
 		'angularBootstrap': '../bower_components/angular-bootstrap/ui-bootstrap-tpls.min',
 		'highcharts': '../bower_components/highcharts/highcharts',
+		'highcharts-ng': '../bower_components/highcharts-ng/dist/highcharts-ng.min',
 		'lodash': '../bower_components/lodash/lodash'
 	},
 	shim: {
@@ -22,6 +23,9 @@ require.config({
 		},
 		'highcharts': {
 			deps: ['angular']
+		},
+		'highcharts-ng': {
+			deps: ['angular', 'highcharts']
 		}
 	}
 });

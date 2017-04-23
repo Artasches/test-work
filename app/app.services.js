@@ -1,5 +1,3 @@
-// angular/app.services.js
-
 define([
 	'./services/sensorsData'
 ], function() {

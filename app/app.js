@@ -12,8 +12,15 @@ define([
 
 	ng.module(namespace, [
 		'ui.router',
-		'ui.bootstrap'
+		'ui.bootstrap',
+		'highcharts-ng'
 	]);
+
+	// register controllers
+	ng.forEach(controllers, function(item, name) {
+		ng.module(namespace)
+			.controller(name, item);
+	});
 
 	// register routes
 	ng.module(namespace)
