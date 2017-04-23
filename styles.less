@@ -20,7 +20,7 @@
   margin: 0 -15px;
   .chart {
     display: inline-block;
-    width: 50%;
+    width: 100%;
     padding: 15px;
     vertical-align: top;
     .block {
@@ -31,10 +31,18 @@
       overflow: hidden;
       .controls {
         padding: 5px;
-        .btn{
+        .btn {
           margin-right: 5px;
         }
       }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .charts {
+    .chart {
+      width: 50%;
     }
   }
 }
