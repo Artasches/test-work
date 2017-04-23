@@ -1,0 +1,22 @@
+{
+  "name": "test-work",
+  "version": "0.0.1",
+  "description": "...",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:Artasches/test-work.git"
+  },
+  "author": "Artik",
+  "license": "ISC",
+  "homepage": "https://github.com/Artasches/test-work#readme",
+  "devDependencies": {
+    "browser-sync": "^2.17.5",
+    "gulp": "^3.9.1"
+  },
+  "dependencies": {
+    "bower": "^1.8.0"
+  }
+}
